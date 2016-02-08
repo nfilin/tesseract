@@ -43,5 +43,14 @@ extern zend_module_entry tesseract_module_entry;
 extern zend_object_handlers tesseract_object_handlers;
 extern zend_class_entry *tesseract_ce_exception;
 
+#define CALL_METHOD_BASE(classname, name) zim_##classname##_##name
+
+#define CALL_METHOD(classname, name, retval, thisptr)                  \
+  CALL_METHOD_BASE(classname, name)(0, retval, NULL, thisptr, 0 TSRMLS_CC);
+
+
+#include <tesseract/baseapi.h>
+#include <leptonica/allheaders.h>
+
 
 #endif /* PHP_TESSERACT_H */
