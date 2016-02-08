@@ -1,0 +1,15 @@
+{
+  "name": "nfilin/tesseract",
+  "homepage": "https://github.com/nfilin/tesseract",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Stanislav Markovskyi",
+      "email": "samarkowski@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4"
+  }
+}
